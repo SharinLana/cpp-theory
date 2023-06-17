@@ -50,9 +50,9 @@ int main()
   std::cout << std::endl;
 
   std::cout << "std::internal" << std::endl;
-  std::cout << std::internal;
-  std::cout << std::setfill('-');
+  std::cout << std::right;
   std::cout << std::setw(colWidth) << "LastName " << std::setw(colWidth) << "FirstName " << std::setw(colWidth) << "Ade " << std::setw(colWidth) << std::endl;
+  std::cout << std::internal;
   std::cout << std::setw(colWidth) << "Smith " << std::setw(colWidth) << " Helena " << std::setw(colWidth) << " 16 " << std::setw(colWidth) << std::endl;
   std::cout << std::setw(colWidth) << "Brown " << std::setw(colWidth) << " Lily " << std::setw(colWidth) << " 45 " << std::setw(colWidth) << std::endl;
   std::cout << std::setw(colWidth) << "Carrow " << std::setw(colWidth) << " John " << std::setw(colWidth) << " 44 " << std::setw(colWidth) << std::endl;
