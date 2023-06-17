@@ -23,7 +23,9 @@ int main()
   std::cout << "======== STD::FLUSH ========= " << std::endl;
 
   std::cout << std::endl;
-
+  std::cout << "This is a nice message ..." << std::endl << std::flush;
+  // After the std:flush, we're sure that after this line
+  // the message has been sent directly to the stream
   std::cout << std::endl;
 
   // ! std::setw - sets width between printed characters/words
@@ -38,13 +40,29 @@ int main()
   std::cout << "======== STD::LEFT/RIGHT/INTERNAL ========= " << std::endl;
 
   std::cout << std::endl;
+  std::cout << "std::right" << std::endl;
+  std::cout << std::right;
+  std::cout << std::setfill('-');
+  std::cout << std::setw(colWidth) << "LastName " << std::setw(colWidth) << "FirstName " << std::setw(colWidth) << "Ade " << std::setw(colWidth) << std::endl;
+  std::cout << std::setw(colWidth) << "Smith " << std::setw(colWidth) << " Helena " << std::setw(colWidth) << " 16 " << std::setw(colWidth) << std::endl;
+  std::cout << std::setw(colWidth) << "Brown " << std::setw(colWidth) << " Lily " << std::setw(colWidth) << " 45 " << std::setw(colWidth) << std::endl;
+  std::cout << std::setw(colWidth) << "Carrow " << std::setw(colWidth) << " John " << std::setw(colWidth) << " 44 " << std::setw(colWidth) << std::endl;
+  std::cout << std::endl;
 
+  std::cout << "std::internal" << std::endl;
+  std::cout << std::internal;
+  std::cout << std::setfill('-');
+  std::cout << std::setw(colWidth) << "LastName " << std::setw(colWidth) << "FirstName " << std::setw(colWidth) << "Ade " << std::setw(colWidth) << std::endl;
+  std::cout << std::setw(colWidth) << "Smith " << std::setw(colWidth) << " Helena " << std::setw(colWidth) << " 16 " << std::setw(colWidth) << std::endl;
+  std::cout << std::setw(colWidth) << "Brown " << std::setw(colWidth) << " Lily " << std::setw(colWidth) << " 45 " << std::setw(colWidth) << std::endl;
+  std::cout << std::setw(colWidth) << "Carrow " << std::setw(colWidth) << " John " << std::setw(colWidth) << " 44 " << std::setw(colWidth) << std::endl;
   std::cout << std::endl;
 
   // ! std::setfill - fills empty space with a specified sign
   std::cout << "======== STD::SETFILL ========= " << std::endl;
 
   std::cout << std::endl;
+  std::cout << "std::left" << std::endl;
   std::cout << std::left;
   std::cout << std::setfill('-');
   std::cout << std::setw(colWidth) << "LastName " << std::setw(colWidth) << "FirstName " << std::setw(colWidth) << "Ade " << std::setw(colWidth) << std::endl;
