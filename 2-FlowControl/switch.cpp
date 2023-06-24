@@ -11,13 +11,14 @@ int main()
   switch (tool)
   {
   case Pen:
-  {
-    std::cout << "Active tool is Pen" << std::endl; // Active tool is Pen
-  }
-  break;
   case Marker:
   {
-    std::cout << "Active tool is Marker" << std::endl;
+    std::cout << "Drawing tool" << std::endl; // Drawing tool
+  }
+  break;
+  case Eraser:
+  {
+    std::cout << "Erasing tool" << std::endl;
   }
   break;
   default:
