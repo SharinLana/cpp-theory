@@ -24,7 +24,10 @@ int main()
   {
     std::cout << "Doesn't match any tool" << std::endl;
   }
+  break;
   }
+
+  std::cout<< "Next line" << std::endl; // Next line
 
   return 0;
 }
