@@ -22,9 +22,9 @@ int main()
 
   // Precision
   std::cout << std::setprecision(20);
-  std::cout << "Num1 is: " << num1 << std::endl; // 8 precise digits after . All other numbers in a raw are just a garbage
-  std::cout << "Num2 is: " << num2 << std::endl; // 15
-  std::cout << "Num3 is: " << num3 << std::endl; // 15
+  std::cout << "Num1 is: " << num1 << std::endl; // 8 precise digits after . All other numbers in a row are just a garbage
+  std::cout << "Num2 is: " << num2 << std::endl; // 15 precise digits
+  std::cout << "Num3 is: " << num3 << std::endl; // 15 precise digits
 
   // Scientific notation (for really huge numbers). The previous examples are called fixed notation
   double num4{134566788};
