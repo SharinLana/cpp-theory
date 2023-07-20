@@ -86,5 +86,14 @@ int main()
   const int nums[3]{4, 6, 7};
   // nums[1] = 8; // ! ERROR
 
+  // Array bounds
+  std::cout << std::endl;
+  std::cout << "Array bounds" << std::endl;
+  std::cout << std::endl;
+
+  // !Reading past of your array bounds is BAD!
+  // !It's going to read out something you didn't put there.
+  std::cout << "nums[3] is : " << nums[3] << std::endl; // 0 (wrong data)
+  std::cout << std::endl;
   return 0;
 }
