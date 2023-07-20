@@ -61,5 +61,22 @@ int main()
   }
   std::cout << std::endl;
 
+  // Getting the size of the array, old way (prior C++17)
+  // Calculate the total number of bytes in the array and divide it by the size of a single element
+  std::cout << std::endl;
+  std::cout << "Getting the size of the array (old way, prior C++17)" << std::endl;
+  std::cout << std::endl;
+
+  std::cout << "sizeof(numbers) is : " << sizeof(numbers) << std::endl;    // 36 bytes
+  std::cout << "sizeof(numbers[0]) : " << sizeof(numbers[0]) << std::endl; // 4 bytes
+  int result{sizeof(numbers) / sizeof(numbers[0])};                        // 9
+
+  // Looping through the array using its size as an ending point
+  for (size_t i{0}; i < result; i++)
+  {
+    std::cout << "The number under the index " << i << " is : " << numbers[i] << std::endl;
+  }
+  std::cout << std::endl;
+
   return 0;
 }
