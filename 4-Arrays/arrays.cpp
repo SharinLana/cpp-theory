@@ -78,5 +78,13 @@ int main()
   }
   std::cout << std::endl;
 
+  // Constant arrays: CANNOT BE MODIFIED
+  std::cout << std::endl;
+  std::cout << "Constant arrays: CANNOT BE MODIFIED" << std::endl;
+  std::cout << std::endl;
+
+  const int nums[3]{4, 6, 7};
+  // nums[1] = 8; // ! ERROR
+
   return 0;
 }
