@@ -16,7 +16,7 @@ int main()
   // Read data out
   for (size_t i{0}; i < 10; i++)
   {
-    std::cout << "Scores [" << i << "] " << scores[i] << std::endl;
+    std::cout << "Scores [" << i << "]: " << scores[i] << std::endl;
   }
   std::cout << std::endl;
 
@@ -29,8 +29,20 @@ int main()
 
   for (size_t i{0}; i < 5; i++)
   {
-    std::cout << "Salary [" << i << "] " << salaries[i] << std::endl;
+    std::cout << "Salary [" << i << "]: " << salaries[i] << std::endl; // with indexes
   }
+  std::cout << std::endl;
+
+  // Looping through an array with a range based for loop
+  std::cout << std::endl;
+  std::cout << "Looping through an array with a range based for loop" << std::endl;
+  std::cout << std::endl;
+
+  for (auto salary : salaries)
+  {
+    std::cout << "Salary: " << salary << std::endl; // no indexes
+  }
+  std::cout << std::endl;
 
   return 0;
 }
