@@ -35,7 +35,7 @@ int main()
 
   // Looping through an array with a range based for loop
   std::cout << std::endl;
-  std::cout << "Looping through an array with a range based for loop" << std::endl;
+  std::cout << "Looping through an array with a range based for loop (no indexes)" << std::endl;
   std::cout << std::endl;
 
   for (auto salary : salaries)
