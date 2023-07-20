@@ -44,5 +44,22 @@ int main()
   }
   std::cout << std::endl;
 
+  // Getting the size of the array
+  std::cout << std::endl;
+  std::cout << "Getting the size of the array" << std::endl;
+  std::cout << std::endl;
+
+  int numbers[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int sizeOfNumbersArr{std::size(numbers)};
+
+  std::cout << "The size of the array is : " << sizeOfNumbersArr << std::endl; // 9
+
+  // Looping through the array using its size as an ending point
+  for (size_t i{0}; i < sizeOfNumbersArr; i++)
+  {
+    std::cout << "The number under the index " << i << " is : " << numbers[i] << std::endl;
+  }
+  std::cout << std::endl;
+
   return 0;
 }
