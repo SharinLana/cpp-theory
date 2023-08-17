@@ -8,6 +8,7 @@ int main()
   double double_value{13.56};
 
   // Ways to assign a value to a reference
+  // ! References MUST be initialized at declaration
   int &ref_to_int_value1{int_value};
   int &ref_to_int_value2 = int_value;
   double &ref_to_double_value{double_value};
