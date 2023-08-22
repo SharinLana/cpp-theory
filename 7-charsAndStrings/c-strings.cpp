@@ -14,7 +14,7 @@ int main()
 
   std::cout << "message1: " << message1 << std::endl;   // The sky is blue
   std::cout << "message2: " << message2 << std::endl;   // The sky is blue
-  std::cout << "*message2: " << *message2 << std::endl; // T 
+  std::cout << "*message2: " << *message2 << std::endl; // T
 
   // strlen ignores null character
   std::cout << "strlen(message1): " << std::strlen(message1) << std::endl; // 15
@@ -112,7 +112,71 @@ int main()
     // filename
   }
 
-  std::cout<< std::endl;
+  std::cout << std::endl;
+
+  // ! Join strings: std::strcat
+  std::cout << "Concatenation: std::strcat" << std::endl;
+
+  char start[50]{"Hello, "};
+  char end[50]{"World!"};
+
+  std::strcat(start, end);
+  std::cout << "start is: " << start << std::endl; // Hello, World!
+
+  std::strcat(start, "Goodbye World!");
+  std::cout << "start after the second concatenation is: " << start << std::endl; // Hello, World!Goodbye World!
+
+  std::cout << std::endl;
+
+  char *start2 = new char[30]{'B', 'u', 's', 'y', 'a'};
+  char *end2 = new char[30]{',', ' ', 'm', 'y', ' ', 'c', 'a', 't'};
+
+  std::strcat(start2, end2);
+  std::cout << "start2 after concat is: " << start2 << std::endl;                     // Busya, my cat
+  std::cout << "start2 length after concat is: " << std::strlen(start2) << std::endl; // 13
+
+  // ! Join strings: std::strncat
+  // Concatenates n characters from src to dest
+  // Returns a pointer to the result string
+  // signature: char *strncat(char *start, const char *end, std::size_t count)
+
+  std::cout << "Concatenation of n characters from src to dest: std::strncat" << std::endl;
+
+  char dest[50]{"hello, "};
+  char src[30]{"good to see you again!"};
+
+  std::cout << "The result is: " << std::strncat(dest, src, 16) << std::endl; // hello, good to see you
+
+  std::cout << std::endl;
+
+  // ! Copy strings: std::strcpy
+  // signature: char *strcpy(char *dest, const char *src)
+  std::cout << "Copying strings: std::strcpy" << std::endl;
+
+  const char *source = "C++ is a multipurpose programming language";
+  char *destination = new char[std::strlen(source) + 1]; // created an empty c-string with a length = source
+  // + 1 is for the null character
+  // Contains garbage data. Uninitialized
+
+  std::strcpy(destination, source);
+  std::cout << "destination is: " << destination << std::endl;                          // C++ is a multipurpose programming language
+  std::cout << "sizeof(destination) is: " << sizeof(destination) << std::endl;          // 8
+  std::cout << "std:strlen(destination) is: " << std::strlen(destination) << std::endl; // 42
+
+  std::cout << std::endl;
+
+  // ! Copy strings: std::strncpy
+  // Copies n characters from src to dest
+  // signature: char *strncpy(char *dest, const char *src, std::size_t count)
+  std::cout << "Copying n characters from src to dest: std::strcpy" << std::endl;
+
+  const char *src3 = "Hello";
+  char dest3[] = {'a', 'b', 'c', 'd', '\0'}; // Have to put the null character if we want to print
+
+  std::cout << "dest3 is: " << dest3 << std::endl;                                      // abcd
+  std::cout << "dest3 after copying is: " << std::strncpy(dest3, src3, 5) << std::endl; // Hello
+
+  std::cout << std::endl;
 
   return 0;
 }
